@@ -9,6 +9,7 @@ syn keyword jenkinsfileOption contained buildDiscarder disableConcurrentBuilds o
 syn keyword jenkinsfileOption contained skipStagesAfterUnstable checkoutToSubdirectory timeout retry timestamps nextgroup=jenkinsfileOptionParams
 syn region  jenkinsfileOptionParams contained start='(' end=')' transparent contains=@groovyTop
 syn match   jenkinsfileOptionO /[a-zA-Z]\+([^)]*)/ contains=jenkinsfileOption,jenkinsfileOptionParams transparent containedin=groovyParenT1
+syn keyword jenkinsfileOptionParams label yaml
 
 syn keyword jenkinsfileCoreStep checkout
 syn keyword jenkinsfileCoreStep docker skipwhite nextgroup=jenkinsFileDockerConfigBlock
@@ -20,6 +21,7 @@ syn keyword jenkinsfileCoreStep parallel
 syn keyword jenkinsfileCoreStep steps
 syn keyword jenkinsfileCoreStep step
 syn keyword jenkinsfileCoreStep tool
+syn keyword jenkinsfileCoreStep code utils string slack artifactory
 
 " TODO: These should probably be broken out.
 syn keyword jenkinsfileCoreStep post always changed failure success unstable aborted
