@@ -29,6 +29,7 @@ syn keyword jenkinsfileCoreStep post always changed failure success unstable abo
 syn region  jenkinsFileDockerConfigBlock contained start='{' end='}' contains=groovyString,jenkinsfileDockerKeyword transparent
 syn keyword jenkinsFileDockerKeyword contained image args dockerfile additionalBuildArgs
 
+syn match   jenkinsfilePipelineStep "\.*env."
 syn keyword jenkinsfilePipelineStep Applitools ArtifactoryGradleBuild Consul MavenDescriptorStep OneSky VersionNumber
 syn keyword jenkinsfilePipelineStep ViolationsToBitbucketServer ViolationsToGitHub ViolationsToGitLab _OcAction _OcContextInit
 syn keyword jenkinsfilePipelineStep _OcWatch acceptGitLabMR acsDeploy activateDTConfiguration addBadge addErrorBadge
